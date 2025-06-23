@@ -1,0 +1,18 @@
+#!/usr/bin/php
+
+<?php
+
+require_once __DIR__ . "/vendor/Artisan.php";
+
+use Vendor\Artisan;
+
+$command = $argv[1] ?? null;
+
+switch ($command) {
+    case "serve":
+        Artisan::serve();
+        break;
+    default:
+        echo "Masukkan perintah yang benar." . PHP_EOL;
+        break;
+}

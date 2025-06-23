@@ -1,0 +1,159 @@
+@import url("./app.css");
+
+.hero {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 128px 0 64px 0;
+}
+
+.hero h5 {
+  align-items: center;
+  background: #00000010;
+  backdrop-filter: blur(10px);
+  border: 1px solid #00000025;
+  border-radius: 9999px;
+  color: #000000;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 8px 16px;
+}
+
+.hero h1 {
+  align-items: center;
+  color: #0a0b0d;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero span {
+  background-clip: text;
+  background-image: linear-gradient(to right, #fcc800, #ff6900);
+  color: transparent;
+}
+
+.hero h4 {
+  color: #0a0b0d;
+  cursor: default;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  width: 50%;
+}
+
+.hero a {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 14px;
+  padding: 12px 16px;
+}
+
+.stats {
+  background-color: #155dfc;
+  color: #f0f8ff;
+  cursor: default;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 48px 5%;
+}
+
+.stats > div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats h3 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.stats h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.categories {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 48px 0;
+  padding: 0 5%;
+}
+
+.categories > h3 {
+  color: #0a0b0d;
+  cursor: default;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  text-align: center;
+}
+
+.categories > h5 {
+  color: #0a0b0d;
+  cursor: default;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.categories div {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2em;
+  width: 100%;
+}
+
+.categories figure {
+  align-items: center;
+  border: 1px solid #00000010;
+  border-radius: 8px;
+  color: #0a0b0d;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure i {
+  color: #f0f8ff;
+  font-size: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure h4 {
+  color: #0a0b0d;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 1em;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure h6 {
+  color: #0a0b0d;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 0.25em;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
