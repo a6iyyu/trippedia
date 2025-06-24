@@ -22,9 +22,13 @@
 </head>
 
 <body>
-    <?php require __DIR__ . "/../shared/navigation/header.php"; ?>
+    <?php if (!in_array(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), ['/masuk', '/daftar'])): ?>
+        <?php require __DIR__ . "/../shared/navigation/header.php"; ?>
+    <?php endif; ?>
     <?= $content ?>
-    <?php require __DIR__ . "/../shared/navigation/footer.php"; ?>
+    <?php if (!in_array(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), ['/masuk', '/daftar'])): ?>
+        <?php require __DIR__ . "/../shared/navigation/footer.php"; ?>
+    <?php endif; ?>
     <script src="<?= asset('bootstrap/js/bootstrap.min.js') ?>"></script>
     <script src="<?= asset('jquery/jquery.min.js') ?>"></script>
     <script src="<?= asset('js/app.js') ?>"></script>

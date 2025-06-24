@@ -1,7 +1,7 @@
 <?php
 
-use App\Auth;
-use App\Home;
+use App\Http\Auth;
+use App\Http\Home;
 use Vendor\Route;
 
 Route::get('/', [Home::class, 'index']);

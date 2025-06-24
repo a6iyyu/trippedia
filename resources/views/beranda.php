@@ -49,17 +49,17 @@ push('styles', '<link rel="stylesheet" href="' . asset('css/home.css') . '">');
             <h6>25+ Destinasi</h6>
         </figure>
         <figure>
-            <i></i>
+            <i class="fa-solid fa-mountain"></i>
             <h4>Gunung</h4>
             <h6>18+ Destinasi</h6>
         </figure>
         <figure>
-            <i></i>
+            <i class="fa-solid fa-tree"></i>
             <h4>Hutan</h4>
             <h6>12+ Destinasi</h6>
         </figure>
         <figure>
-            <i></i>
+            <i class="fa-solid fa-city"></i>
             <h4>Kota</h4>
             <h6>30+ Destinasi</h6>
         </figure>

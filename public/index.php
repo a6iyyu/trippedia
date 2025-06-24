@@ -15,8 +15,8 @@ require_once __DIR__ . '/../vendor/Log.php';
 require_once __DIR__ . '/../vendor/Route.php';
 
 // Register controllers
-require_once __DIR__ . '/../app/Auth.php';
-require_once __DIR__ . '/../app/Home.php';
+require_once __DIR__ . '/../app/Controllers/Auth.php';
+require_once __DIR__ . '/../app/Controllers/Home.php';
 
 // Register web routes
 require_once __DIR__ . '/../routes/web.php';

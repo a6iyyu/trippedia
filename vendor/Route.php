@@ -5,12 +5,49 @@ namespace Vendor;
 use Exception;
 use Throwable;
 
-class Route {
+class Route
+{
     private static array $routes = [];
+    private static ?string $name = null;
 
     public static function get(string $path, array|callable $callback): void
     {
         self::$routes['GET'][$path] = $callback;
+
+        if (self::$name) {
+            self::$routes[self::$name] = $path;
+            self::$name == null;
+        }
+    }
+
+    public static function post(string $path, array|callable $callback): void
+    {
+        self::$routes['POST'][$path] = $callback;
+
+        if (self::$name) {
+            self::$routes[self::$name] = $path;
+            self::$name == null;
+        }
+    }
+
+    public static function put(string $path, array|callable $callback): void
+    {
+        self::$routes['PUT'][$path] = $callback;
+
+        if (self::$name) {
+            self::$routes[self::$name] = $path;
+            self::$name == null;
+        }
+    }
+
+    public static function delete(string $path, array|callable $callback): void
+    {
+        self::$routes['DELETE'][$path] = $callback;
+
+        if (self::$name) {
+            self::$routes[self::$name] = $path;
+            self::$name == null;
+        }
     }
 
     public static function dispatch(): void
@@ -29,6 +66,17 @@ class Route {
         } catch (Throwable $throwable) {
             self::error($throwable);
         }
+    }
+
+    public static function name(string $name): Route
+    {
+        self::$name = $name;
+        return new self;
+    }
+
+    public static function get_path_by_name(string $name): ?string
+    {
+        return self::$routes[$name] ?? null;
     }
 
     private static function execute(array|callable $handler): void

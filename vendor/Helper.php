@@ -1,5 +1,7 @@
 <?php
 
+use Vendor\Route;
+
 $__stacks = [];
 
 /**
@@ -12,6 +14,11 @@ $__stacks = [];
 function asset(string $path): string
 {
     return '/' . ltrim($path, '/');
+}
+
+function base_path(string $path = ''): string
+{
+    return __DIR__ . '/../' . ltrim($path, '/');
 }
 
 /**
@@ -31,6 +38,21 @@ function push(string $section, string $content): void
     }
 
     $__stacks[$section][] = $content;
+}
+
+function route(string $name, array $params = [])
+{
+    $path = Route::get_path_by_name($name);
+
+    if (!$path) {
+        throw new Exception("Perutean '$name' tidak ditemukan.");
+    }
+
+    foreach ($params as $key => $value) {
+        $path = str_replace("{$key}", $value, $path);
+    }
+
+    return $path;
 }
 
 /**

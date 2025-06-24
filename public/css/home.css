@@ -99,7 +99,7 @@
 .categories > h3 {
   color: #0a0b0d;
   cursor: default;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   margin-bottom: 0.4em;
   text-align: center;
@@ -108,7 +108,7 @@
 .categories > h5 {
   color: #0a0b0d;
   cursor: default;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   text-align: center;
 }
@@ -123,7 +123,7 @@
 
 .categories figure {
   align-items: center;
-  border: 1px solid #00000010;
+  border: 1.5px solid #00000010;
   border-radius: 8px;
   color: #0a0b0d;
   cursor: pointer;
@@ -140,11 +140,53 @@
   transition: all 0.3s ease-in-out;
 }
 
+.categories figure:first-child i {
+  background-color: #155dfc;
+  border-radius: 999px;
+  color: #f0f8ff;
+  font-size: 20px;
+  padding: 16px 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure:nth-child(2) i {
+  background-color: #ff6900;
+  border-radius: 999px;
+  color: #f0f8ff;
+  font-size: 20px;
+  padding: 16px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure:nth-child(3) i {
+  background-color: #ff0000;
+  border-radius: 999px;
+  color: #f0f8ff;
+  font-size: 20px;
+  padding: 15px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure:last-child i {
+  background-color: #fcc800;
+  border-radius: 999px;
+  color: #f0f8ff;
+  font-size: 20px;
+  padding: 16px 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.categories figure:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  color: #f0f8ff;
+  transition: all 0.3s ease-in-out;
+}
+
 .categories figure h4 {
   color: #0a0b0d;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
-  margin-top: 1em;
+  margin-top: 0.75em;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
